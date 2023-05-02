@@ -1,0 +1,46 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.base-btn__white {
+  color: rgb(28, 37, 54);
+  background: rgb(255, 255, 255);
+  padding: 0px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  height: 40px;
+  max-height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: inherit;
+  border: 1px solid rgb(234, 239, 245);
+  &:hover {
+    color: rgb(28, 37, 54);
+    background: rgb(255, 255, 255);
+    border-color: rgb(192, 199, 211);
+  } 
+}
+
+.base-btn {
+  background: rgb(28, 37, 54);
+  color: rgb(255, 255, 255);
+  padding: 0px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  height: 40px;
+  max-height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: inherit;
+  &:hover {
+    background: rgb(28, 37, 54);
+    color: rgb(255, 255, 255);
+  }
+}

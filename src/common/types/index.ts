@@ -1,6 +1,6 @@
-import { NextPage } from "next"
-import { AppProps } from "next/app"
-import { ReactNode } from "react"
+import { NextPage } from 'next'
+import { AppProps } from 'next/app'
+import { ReactNode } from 'react'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar'
 
 export type TLayoutProps = {
@@ -16,5 +16,5 @@ export type TNextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 }
 
 export interface IAppBarProps extends MuiAppBarProps {
-  open?: boolean;
+  open?: boolean
 }
