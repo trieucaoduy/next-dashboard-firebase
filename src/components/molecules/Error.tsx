@@ -1,15 +1,15 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 interface IErr {
   error: Error
   reset: () => void
 }
 
-const Error = ({error, reset}: IErr) => {
+const Error = ({ error, reset }: IErr) => {
   useEffect(() => {
-    console.error(error);
+    console.error(error)
   }, [error])
 
   return (
@@ -24,7 +24,7 @@ const Error = ({error, reset}: IErr) => {
         Try again
       </button>
     </>
-  );
+  )
 }
 
 export default Error

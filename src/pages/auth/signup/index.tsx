@@ -2,27 +2,27 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { auth } from '@/libs/firebase'
 import styled from '@emotion/styled'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import style from '@/styles/signup.module.scss';
-import { Box } from '@mui/system';
-import { Button, TextField } from '@mui/material';
-import { GoogleIcon } from '@/components/Common/Icons';
-import { signUp } from '@/services/user';
+import style from '@/styles/signup.module.scss'
+import { Box } from '@mui/system'
+import { Button, TextField } from '@mui/material'
+import { GoogleIcon } from '@/components/atoms/Icons'
+import { signUp } from '@/services/user'
 import { FieldValues, useForm } from 'react-hook-form'
 import * as Yup from 'yup'
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const signupSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email address').required('This field is required'),
   fullName: Yup.string().required('This field is required'),
-  password: Yup.string().required('This field is required'),
+  password: Yup.string().required('This field is required')
 })
 
 const SignupPage = () => {
   const formOptions = { resolver: yupResolver(signupSchema) }
   const { register, handleSubmit, formState } = useForm({
     mode: 'onBlur',
-    ...formOptions,
+    ...formOptions
   })
   const { errors } = formState
   const router = useRouter()
@@ -49,55 +49,51 @@ const SignupPage = () => {
     <SignupContainer>
       <div className={style.base}>
         <div className={style.container}>
-          <div className={style.title}>
-            Hi 👋, let’s get familiar.
-          </div>
-          <div className={style.subtitle}>
-            {"Let's create forms and collect submissions"}
-          </div>
+          <div className={style.title}>Hi 👋, let’s get familiar.</div>
+          <div className={style.subtitle}>{"Let's create forms and collect submissions"}</div>
           <div className={style.flatform_action}>
-            <Button startIcon={<GoogleIcon />} fullWidth className='base-btn__white'>Continue with Google</Button>
+            <Button startIcon={<GoogleIcon />} fullWidth className='base-btn__white'>
+              Continue with Google
+            </Button>
           </div>
           <p className={style.text_other}>
             <span>or Sign up with email</span>
           </p>
-          <Box
-            component="form"
-            noValidate
-            autoComplete="off"
-            className={style.form}
-            onSubmit={handleSubmit(onSignup)}
-          >
+          <Box component='form' noValidate autoComplete='off' className={style.form} onSubmit={handleSubmit(onSignup)}>
             <TextField
               {...register('fullName')}
-              size="small"
+              size='small'
               fullWidth
               error={!!errors?.fullName}
-              label="Full name"
+              label='Full name'
               helperText={errors.fullName?.message as string}
               className={style.input}
             />
             <TextField
               {...register('email')}
-              size="small"
+              size='small'
               fullWidth
               error={!!errors?.email}
-              label="Email"
+              label='Email'
               helperText={errors.email?.message as string}
               className={style.input}
             />
             <TextField
               {...register('password')}
-              size="small"
+              size='small'
               fullWidth
               error={!!errors?.password}
-              label="Password"
+              label='Password'
               helperText={errors.password?.message as string}
               className={style.input}
             />
-            <Button fullWidth className='base-btn' type="submit">Register</Button>
+            <Button fullWidth className='base-btn' type='submit'>
+              Register
+            </Button>
           </Box>
-          <Link href={'/auth/signin'} className={style.link}><p>I have account</p></Link>
+          <Link href={'/auth/signin'} className={style.link}>
+            <p>I have account</p>
+          </Link>
         </div>
       </div>
     </SignupContainer>
@@ -109,7 +105,7 @@ const SignupContainer = styled.div`
   min-height: 100vh;
   &::before {
     background-image: url('/images/auth-left-shape.webp');
-    content: "";
+    content: '';
     width: 337px;
     height: 784px;
     background-size: cover;
@@ -118,7 +114,7 @@ const SignupContainer = styled.div`
     left: 0px;
   }
   &::after {
-    content: "";
+    content: '';
     width: 337px;
     height: 784px;
     background-image: url('/images/auth-right-shape.webp');

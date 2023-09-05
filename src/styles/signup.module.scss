@@ -18,7 +18,7 @@
 .title {
   font-weight: 500;
   font-size: 20px;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .subtitle {
@@ -43,7 +43,7 @@
     transform: translate(-50%, 50%);
   }
   &:after {
-    content: "";
+    content: '';
     width: 130px;
     height: 22px;
     background: rgb(255, 255, 255);

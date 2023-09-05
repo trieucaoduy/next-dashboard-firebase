@@ -18,3 +18,13 @@ export type TNextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 export interface IAppBarProps extends MuiAppBarProps {
   open?: boolean
 }
+
+export interface IVocabulary {
+  id?: string
+  definition: string
+  example: string
+  pronounce: string
+  term: string
+  type: string
+  createAt?: string
+}

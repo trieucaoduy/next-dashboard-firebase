@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -25,7 +29,7 @@ body {
     color: rgb(28, 37, 54);
     background: rgb(255, 255, 255);
     border-color: rgb(192, 199, 211);
-  } 
+  }
 }
 
 .base-btn {
@@ -42,5 +46,33 @@ body {
   &:hover {
     background: rgb(28, 37, 54);
     color: rgb(255, 255, 255);
+  }
+}
+
+.nav {
+  &__wrapper {
+    border-radius: 20px;
+    box-shadow: 0 5px 15px 1px #ddd;
+  }
+
+  &__item {
+    border-radius: 20px;
+    cursor: pointer;
+    &.active {
+      background: #34CAA5;
+      color: #fff;
+      box-shadow: 0 5px 15px 1px #ddd;
+      border: none;
+      .nav__item-icon svg g {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+.c-header {
+  &__wrapper {
+    border-radius: 25px;
+    box-shadow: 0 5px 25px 1px #ddd;
   }
 }

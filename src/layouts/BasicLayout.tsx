@@ -1,4 +1,4 @@
-import Loading from '@/components/Common/Loading'
+import Loading from '@/components/atoms/Loading'
 import { ReactNode, Suspense } from 'react'
 
 type TLayoutProps = {
@@ -6,11 +6,7 @@ type TLayoutProps = {
 }
 
 const BasicLayout = ({ children }: TLayoutProps) => {
-  return (
-    <Suspense fallback={<Loading />}>
-      {children}
-    </Suspense>
-  )
+  return <Suspense fallback={<Loading />}>{children}</Suspense>
 }
 
 export default BasicLayout

@@ -1,0 +1,22 @@
+.mainTab {
+  gap: 40px;
+}
+
+.mainTabBtn {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px !important;
+  line-height: 1.25;
+  padding: 0 !important;
+  text-transform: capitalize;
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.generateHeader {
+  display: flex;
+  gap: 15px 10px;
+  // flex-wrap: wrap;
+}
