@@ -7,7 +7,7 @@ import { toast, ToastContainer } from 'react-toastify'
 import VCButton from '../../../components/atoms/Button'
 
 const buttonProps = {
-  btntype: 'submit'
+  btntype: 'primary'
 }
 
 const CreateTab = () => {
@@ -147,17 +147,21 @@ const CreateTab = () => {
       <Grid container justifyContent='flex-end' gap='16px'>
         <Grid item>
           <VCButton
-            sx={{ marginTop: '24px' }}
+            sx={{ marginTop: '24px', padding: '8px 24px !important', boxShadow: 'none' }}
             variant='contained'
-            icon={<Clear />}
             onClick={onReset}
-            {...{ btntype: 'warning' }}
+            {...{ btntype: 'transparent' }}
           >
             Reset
           </VCButton>
         </Grid>
         <Grid item>
-          <VCButton sx={{ marginTop: '24px' }} variant='contained' icon={<Add />} onClick={onSubmit} {...buttonProps}>
+          <VCButton
+            sx={{ marginTop: '24px', padding: '8px 24px !important' }}
+            variant='contained'
+            onClick={onSubmit}
+            {...buttonProps}
+          >
             Create
           </VCButton>
         </Grid>

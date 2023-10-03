@@ -42,6 +42,8 @@ const getBtnColor = (type: string) => {
       return '#919EAB'
     case 'submit':
       return '#212b36'
+    case 'transparent':
+      return '#fff'
     default:
       return '#5BE584'
   }
@@ -51,12 +53,15 @@ export const StyledButton = styled(Button)<IStyledButton>`
   display: flex;
   align-items: center;
   gap: 5px;
-  background: ${(props) => (props?.btntype ? getBtnColor(props?.btntype) : '#5BE584')};
-  color: #fff;
+  background: ${(props) => (props?.btntype ? getBtnColor(props?.btntype) : '#5BE584')} !important;
+  color: ${(props) => (props?.btntype === 'transparent' ? '#11142D' : '#fff')};
   padding: 6px 16px;
-  border-radius: 8px;
+  border-radius: 24px;
+  box-shadow: 0 !important;
+  transition: box-shadow 0.25s;
   &:hover {
     background: ${(props) => (props?.btntype ? getBtnColor(props?.btntype) : '#5BE584')};
     opacity: 0.7;
+    box-shadow: 0 5px 20px rgba(227, 230, 236, 0.85);
   }
 `

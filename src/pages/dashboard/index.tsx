@@ -6,10 +6,11 @@ import { DashboardIcon } from '@/components/atoms/Icons'
 import MusicPlayerSlider from '@/components/atoms/Player'
 import { BarChart } from '@mui/icons-material'
 import CalculateChartCard from '@/pages/dashboard/components/CalculateChartCard'
+import ContainerStyled from '@/components/atoms/Container'
 
 const Dashboard = () => {
   return (
-    <>
+    <ContainerStyled>
       <Grid container spacing={3} marginBottom={3}>
         <Grid item md={8} xs={12}>
           <Card sx={{ backgroundColor: '#DBF4E2', padding: 4, borderRadius: 5, boxShadow: 0 }}>
@@ -26,7 +27,7 @@ const Dashboard = () => {
                 </Button>
               </Grid>
               <Grid item lg={4} xs={12}>
-                <DashboardIcon width={280} height={232} />
+                {/* <DashboardIcon width={280} height={232} /> */}
               </Grid>
             </Grid>
           </Card>
@@ -48,7 +49,7 @@ const Dashboard = () => {
           <CalculateChartCard title={'Total Downloads'} percent={0.1} total={678} status={'decrease'} />
         </Grid>
       </Grid>
-    </>
+    </ContainerStyled>
   )
 }
 

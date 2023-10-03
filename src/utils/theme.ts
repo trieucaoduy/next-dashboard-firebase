@@ -29,7 +29,7 @@ export const mainTheme = createTheme({
       white: '#fff'
     },
     primary: {
-      main: '#34CAA5',
+      main: '#22c55e',
       light: '#5BE584',
       lighter: '#C8FACD',
       dark: '#007B55',

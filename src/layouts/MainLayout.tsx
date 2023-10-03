@@ -40,7 +40,7 @@ const MainLayout = ({ children }: TLayoutProps) => {
     <div className='container mx-auto min-h-screen'>
       {/* <Header open={open} handleDrawerOpen={handleDrawerOpen} onLogout={logout} /> */}
       <HeaderV2 />
-      <div style={{ display: 'flex', height: '80vh' }}>
+      <div style={{ display: 'flex', minHeight: '80vh', gap: '20px' }}>
         {/* <Navbar open={open} handleDrawerClose={handleDrawerClose} theme={theme} /> */}
         <NavbarV2 />
         <BodyStyled>
@@ -54,6 +54,8 @@ const MainLayout = ({ children }: TLayoutProps) => {
 const BodyStyled = styled.div`
   padding: 16px;
   width: 100%;
+  background: #f3f5fc;
+  border-radius: 25px;
 `
 
 export default MainLayout

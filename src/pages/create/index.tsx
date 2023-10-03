@@ -1,8 +1,7 @@
+import ContainerStyled from '@/components/atoms/Container'
 import { AutoAwesome, Create } from '@mui/icons-material'
-import { Tabs, Tab, Card, Typography, Container } from '@mui/material'
-import { Box } from '@mui/system'
-import { useCallback, useState } from 'react'
-import { toast, ToastContainer } from 'react-toastify'
+import { Tabs, Tab, Card } from '@mui/material'
+import { useState } from 'react'
 import styles from 'src/styles/create.module.scss'
 import { CreateTab, GenerateTab, TabPanel } from './components'
 
@@ -16,7 +15,7 @@ const CreateWord = () => {
   const createNewWord = () => {}
 
   return (
-    <Container>
+    <ContainerStyled>
       <Card>
         <Tabs value={value} onChange={handleChange} className={styles.mainTab}>
           <Tab icon={<Create />} label='Create' className={styles.mainTabBtn} />
@@ -30,7 +29,7 @@ const CreateWord = () => {
           <GenerateTab />
         </TabPanel>
       </Card>
-    </Container>
+    </ContainerStyled>
   )
 }
 
